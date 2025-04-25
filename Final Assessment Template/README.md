@@ -90,14 +90,14 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Correlation Heatmap
 
-![Correlation Heatmap](correlation.png)
+![Correlation Heatmap](correlation.PNG)
 **Table X.** Correlation heatmap of input features. 
 
 ---
 
 #### Global Variable Importance (Assignment 2)
 
-![Global Importance](global importance.png)  
+![Global Importance](global importance.PNG)  
 **Table X.** Global feature importance of the final remediated EBM model.
 
 ---
