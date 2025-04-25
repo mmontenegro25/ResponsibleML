@@ -1,12 +1,17 @@
 # Credit Line Increase Model Card
 
 ### Basic Information
+* **Person or organization developing model**:  
+  Patrick Hall, `jphall@gwu.edu`  
+  Bethel Mandizha, `bethel.mandizha@gwmail.gwu.edu`  
+  Miranda Montenegro, `miranda.montenegrolopez@gwmail.gwu.edu`  
+  Rahul Saha, `rahul.saha@gwmail.gwu.edu`  
+  Zeyu Wang, `zywang@gwu.edu`
 
-* **Person or organization developing model**: Patrick Hall, `jphall@gwu.edu`
-* **Model date**: August, 2021
-* **Model version**: 1.0
-* **License**: MIT
-* **Model implementation code**: [DNSC_6301_Example_Project.ipynb](https://github.com/jphall663/GWU_DNSC_6301_project/blob/main/DNSC_6301_Example_Project.ipynb)
+* **Model date**: April 2025  
+* **Model version**: 1.0  
+* **License**: MIT  
+* **Model implementation code**: [DNSC_6330_Project.ipynb](https://github.com/xxxxxx.ipynb)
 
 ### Intended Use
 * **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
@@ -19,7 +24,7 @@
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
-|**ID**| ID | int | unique row indentifier |
+|**ID**| ID2 | int | unique row indentifier |
 | **LIMIT_BAL** | input | float | amount of previously awarded credit |
 | **SEX** | demographic information | int | 1 = male; 2 = female
 | **RACE** | demographic information | int | 1 = hispanic; 2 = black; 3 = white; 4 = asian |
