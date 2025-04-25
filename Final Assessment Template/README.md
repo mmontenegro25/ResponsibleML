@@ -73,6 +73,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | Train AUC | Validation AUC | Test AUC |
 | --------- | -------------- | -------- |
 | [value missing] | [value missing] | [value missing] |
+
 Table X. AUC values across data partitions. 
 
 | Group               | Validation AIR |
@@ -81,6 +82,7 @@ Table X. AUC values across data partitions.
 | Hispanic vs. White   | [value missing] |
 | Asian vs. White      | [value missing] |
 | Female vs. Male      | [value missing] |
+
 **Table X.** Validation AIR values for race and sex groups. 
 
 (**HINT**: Test AUC taken from [evaluation rsesults here](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv))
@@ -89,6 +91,7 @@ Table X. AUC values across data partitions.
 #### Correlation Heatmap
 
 ![Correlation Heatmap](xxxx.png)
+<img src="download.png" width="500" />
 Figure X. Correlation heatmap for input features. 
 
 ---
