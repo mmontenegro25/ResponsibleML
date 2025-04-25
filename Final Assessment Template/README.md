@@ -24,7 +24,7 @@
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
-|**ID**| ID2 | int | unique row indentifier |
+|**ID**| ID | int | unique row indentifier |
 | **LIMIT_BAL** | input | float | amount of previously awarded credit |
 | **SEX** | demographic information | int | 1 = male; 2 = female
 | **RACE** | demographic information | int | 1 = hispanic; 2 = black; 3 = white; 4 = asian |
@@ -67,29 +67,65 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 ```
 ### Quantitative Analysis
 
-* Models were assessed primarily with AUC and AIR. See details below:
+#### State the metrics used to evaluate your group’s best remediated model
+- Models were assessed primarily with AUC and AIR. See details below:
 
 | Train AUC | Validation AUC | Test AUC |
-| ------ | ------- | -------- |
-| 0.3456 | 0.7891  | 0.7687* |
+| --------- | -------------- | -------- |
+| [value missing] | [value missing] | [value missing] |
+Table X. AUC values across data partitions. 
 
-Table 1. AUC values across data partitions. 
+| Group               | Validation AIR |
+| ------------------- | -------------- |
+| Black vs. White      | [value missing] |
+| Hispanic vs. White   | [value missing] |
+| Asian vs. White      | [value missing] |
+| Female vs. Male      | [value missing] |
+**Table X.** Validation AIR values for race and sex groups. 
 
-| Group | Validation AIR |
-|-------|-----|
-| Black vs. White | 0.8345 |
-| Hispanic vs. White | 0.8765 |
-| Asian vs. White | 1.098 |
-| Female vs. Male | 1.245 |
+(**HINT**: Test AUC taken from [evaluation rsesults here](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv))
 
-Table 2. Validation AIR values for race and sex groups. 
-
-(**HINT**: Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
 
-![Correlation Heatmap](download.png)
+![Correlation Heatmap](xxxx.png)
+Figure X. Correlation heatmap for input features. 
 
-Figure 1. Correlation heatmap for input features. 
+---
+
+#### Global Variable Importance (Assignment 2)
+
+![Global Importance](xxxx.png)  
+Figure X. Global feature importance of the final remediated model.
+
+---
+
+#### Partial Dependence Plots (Assignment 2 and 3)
+
+![Partial Dependence Plots](xxxx.png)  
+Figure X. Partial dependence of debt-to-income ratio.
+
+---
+
+#### Fairness Comparison Plot (Assignment 3)
+
+![AIR Before After](xxxx.png)  
+Figure X. AIR before and after remediation for each group.
+
+---
+
+#### Red Teaming (Assignment 4)
+
+![Red Teaming](xxxx.png)  
+Figure X. Performance degradation under perturbed inputs.
+
+---
+
+#### Debugging and Residuals (Assignment 5)
+
+![Residual Plot](xxxx.png)  
+Figure X. Residuals across subgroups for the remediated model.
+
+---
 
 
