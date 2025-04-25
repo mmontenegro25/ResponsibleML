@@ -97,7 +97,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Global Variable Importance (Assignment 2)
 
-![Global Importance](global importance.PNG)  
+![Global Importance](global_importance.PNG)  
 **Table X.** Global feature importance of the final remediated EBM model.
 
 ---
