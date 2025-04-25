@@ -74,7 +74,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | --------- | -------------- | -------- |
 | [value missing] | [value missing] | [value missing] |
 
-Table X. AUC values across data partitions. 
+**Table X.** AUC values across data partitions. 
 
 | Group               | Validation AIR |
 | ------------------- | -------------- |
@@ -90,44 +90,43 @@ Table X. AUC values across data partitions.
 
 #### Correlation Heatmap
 
-![Correlation Heatmap](xxxx.png)
-<img src="download.png" width="500" />
-Figure X. Correlation heatmap for input features. 
+![Correlation Heatmap](download.png)
+**Table X.** Correlation heatmap for input features. 
 
 ---
 
 #### Global Variable Importance (Assignment 2)
 
 ![Global Importance](xxxx.png)  
-Figure X. Global feature importance of the final remediated model.
+**Table X.** Global feature importance of the final remediated model.
 
 ---
 
 #### Partial Dependence Plots (Assignment 2 and 3)
 
 ![Partial Dependence Plots](xxxx.png)  
-Figure X. Partial dependence of debt-to-income ratio.
+**Table X.** Partial dependence of debt-to-income ratio.
 
 ---
 
 #### Fairness Comparison Plot (Assignment 3)
 
 ![AIR Before After](xxxx.png)  
-Figure X. AIR before and after remediation for each group.
+**Table X.** AIR before and after remediation for each group.
 
 ---
 
 #### Red Teaming (Assignment 4)
 
 ![Red Teaming](xxxx.png)  
-Figure X. Performance degradation under perturbed inputs.
+**Table X.** Performance degradation under perturbed inputs.
 
 ---
 
 #### Debugging and Residuals (Assignment 5)
 
 ![Residual Plot](xxxx.png)  
-Figure X. Residuals across subgroups for the remediated model.
+**Table X.** Residuals across subgroups for the remediated model.
 
 ---
 
