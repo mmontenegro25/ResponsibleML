@@ -90,19 +90,19 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Correlation Heatmap
 
-![Correlation Heatmap](download.png)
-**Table X.** Correlation heatmap for input features. 
+![Correlation Heatmap](correlation.png)
+**Table X.** Correlation heatmap of input features. 
 
 ---
 
 #### Global Variable Importance (Assignment 2)
 
-![Global Importance](xxxx.png)  
-**Table X.** Global feature importance of the final remediated model.
+![Global Importance](global importance.png)  
+**Table X.** Global feature importance of the final remediated EBM model.
 
 ---
 
-#### Partial Dependence Plots (Assignment 2 and 3)
+#### Partial Dependence Plots (Assignment 2)
 
 ![Partial Dependence Plots](xxxx.png)  
 **Table X.** Partial dependence of debt-to-income ratio.
@@ -118,8 +118,12 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Red Teaming (Assignment 4)
 
-![Red Teaming](xxxx.png)  
-**Table X.** Performance degradation under perturbed inputs.
+| Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std |
+|-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|
+| Low   | 0.89     | 0.00                         | 4.37                  | 0.11                | 46.23      | 1.04                     |
+| High  | 0.92     | 1.00                         | 1.08                  | -0.70               | -2.49      | 0.38                     |
+
+**Table X.** Seed rows for adversarial searches identified using the stolen model.
 
 ---
 
