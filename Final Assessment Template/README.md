@@ -137,8 +137,11 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Debugging and Residuals (Assignment 5)
 
-![Residual Plot](xxxx.png)  
-**Table X.** Residuals across subgroups for the remediated model.
+![Residual Plot](residuals.PNG)  
+**Table X.** Residuals Across Subgroups for the Remediated Model.
+
+![Recession Simulation Plot](simulate_recession_conditions.PNG)  
+**Table X.** Feature Changes Under Simulated Recession Conditions.
 
 ---
 
