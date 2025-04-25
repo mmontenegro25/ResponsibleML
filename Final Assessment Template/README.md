@@ -123,7 +123,15 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | Low   | 0.89     | 0.00                         | 4.37                  | 0.11                | 46.23      | 1.04                     |
 | High  | 0.92     | 1.00                         | 1.08                  | -0.70               | -2.49      | 0.38                     |
 
-**Table X.** Seed rows for adversarial searches identified using the stolen model.
+**Table X.** Seed Rows for Adversarial Example Search Using Stolen Model
+
+
+| Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std | phat    |
+|-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|---------|
+| Low   | 0.00     | 0.00                         | 9.09                  | 18.14               | 46.23      | -1.34                    | 7.41e-08|
+| High  | 1.00     | 1.00                         | 0.02                  | -4.95               | -2.49      | 3.34                     | 0.91    |
+
+**Table X.** Performance Degradation Under Perturbed Inputs (Adversarial Examples)
 
 ---
 
