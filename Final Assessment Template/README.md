@@ -91,6 +91,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Correlation Heatmap
 
 ![Correlation Heatmap](correlation.PNG)
+
 **Table X.** Correlation heatmap of input features. 
 
 ---
