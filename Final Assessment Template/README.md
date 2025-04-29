@@ -72,7 +72,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 | Train AUC | Validation AUC | Test AUC |
 | --------- | -------------- | -------- |
-| [value missing] | [value missing] | [value missing] |
+| 0.8305 | 0.8254 | N/A |
 
 **Table X.** AUC values across data partitions. 
 
