@@ -76,7 +76,6 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 **Table X.** AUC values across data partitions. 
 
-(**HINT**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment5_updated.ipynb))
 
 | Group               | Validation AIR |
 | ------------------- | -------------- |
@@ -99,6 +98,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Global Variable Importance (Assignment 2)
 
 ![Global Importance](global_importance.PNG)  
+
 **Table X.** Global feature importance of the final remediated EBM model.
 
 ---
@@ -106,6 +106,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Partial Dependence Plots (Assignment 2)
 
 ![Partial Dependence Plots](partial_dependence_plots.png)  
+
 **Table X.** Partial Dependence Plots by Features.
 
 ---
@@ -113,6 +114,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Fairness Comparison Plot (Assignment 3)
 
 ![AIR Before After](xxxx.png)  
+
 **Table X.** AIR before and after remediation for each group.
 
 ---
@@ -139,9 +141,11 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 #### Debugging and Residuals (Assignment 5)
 
 ![Residual Plot](residuals.PNG)  
+
 **Table X.** Residuals Across Subgroups for the Remediated Model.
 
 ![Recession Simulation Plot](simulate_recession_conditions.PNG)  
+
 **Table X.** Feature Changes Under Simulated Recession Conditions.
 
 ---
