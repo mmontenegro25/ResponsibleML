@@ -83,7 +83,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | Asian vs. White      | 1.154 |
 | Female vs. Male      | 0.962 |
 
-**Figure X.** Validation AIR values for race and sex groups. 
+**Table X.** Validation AIR values for race and sex groups. 
 
 (**HINT**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
 
