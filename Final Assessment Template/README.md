@@ -78,14 +78,13 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 | Group               | Validation AIR |
 | ------------------- | -------------- |
-| Black vs. White      | [value missing] |
-| Hispanic vs. White   | [value missing] |
-| Asian vs. White      | [value missing] |
-| Female vs. Male      | [value missing] |
+| Black vs. White      | 0.791 |
+| Asian vs. White      | 1.154 |
+| Female vs. Male      | 0.962 |
 
 **Table X.** Validation AIR values for race and sex groups. 
 
-(**HINT**: Test AUC taken from [evaluation rsesults here](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv))
+(**HINT**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
 
 
 #### Correlation Heatmap
