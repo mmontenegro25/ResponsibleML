@@ -83,7 +83,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | Asian vs. White      | 1.154 |
 | Female vs. Male      | 0.962 |
 
-**Table X.** Validation AIR values for race and sex groups. 
+**Figure X.** Validation AIR values for race and sex groups. 
 
 (**HINT**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
 
@@ -92,7 +92,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ![Correlation Heatmap](correlation.PNG)
 
-**Table X.** Correlation heatmap of input features. 
+**Figure X.** Correlation Heatmap of Input Features. 
 
 ---
 
@@ -100,7 +100,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ![Global Importance](global_importance.PNG)  
 
-**Table X.** Global feature importance of the final remediated EBM model.
+**Figure X.** Global Feature Importance of the Remediated EBM Model.
 
 ---
 
@@ -108,15 +108,15 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ![Partial Dependence Plots](partial_dependence_plots.png)  
 
-**Table X.** Partial Dependence Plots by Features.
+**Figure X.** Partial Dependence Plots by Features.
 
 ---
 
 #### Fairness Comparison Plot (Assignment 3)
 
-![AIR Before After](xxxx.png)  
+![AIR and AUC plots](AIR_AUC.png)  
 
-**Table X.** AIR before and after remediation for each group.
+**Figure X.** Relationship Between AIR and AUC for Grid Search Results.
 
 ---
 
