@@ -76,6 +76,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 **Table X.** AUC values across data partitions. 
 
+(**HINT**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment5_updated.ipynb))
+
 | Group               | Validation AIR |
 | ------------------- | -------------- |
 | Black vs. White      | 0.791 |
