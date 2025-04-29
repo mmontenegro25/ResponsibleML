@@ -104,8 +104,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Partial Dependence Plots (Assignment 2)
 
-![Partial Dependence Plots](partial_dependence_plots.PNG)  
-**Table X.** Partial dependence of debt-to-income ratio.
+![Partial Dependence Plots](partial_dependence_plots.png)  
+**Table X.** Partial Dependence Plots by Features.
 
 ---
 
