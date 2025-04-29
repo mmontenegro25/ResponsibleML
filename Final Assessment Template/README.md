@@ -11,11 +11,11 @@
 * **Model date**: April 2025  
 * **Model version**: 1.0  
 * **License**: MIT  
-* **Model implementation code**: [DNSC_6330_Project.ipynb](https://github.com/xxxxxx.ipynb)
+* **Model implementation code**: [xxxx.ipynb](https://github.com/xxxxxx.ipynb)
 
 ### Intended Use
 * **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
-* **Primary intended users**: Students in GWU DNSC 6301 bootcamp.
+* **Primary intended users**: Students in GWU DNSC 6330 Responsible Machine Learning.
 * **Out-of-scope use cases**: Any use beyond an educational example is out-of-scope.
 
 ### Training Data
@@ -104,7 +104,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Partial Dependence Plots (Assignment 2)
 
-![Partial Dependence Plots](xxxx.png)  
+![Partial Dependence Plots](partial_dependence_plots.PNG)  
 **Table X.** Partial dependence of debt-to-income ratio.
 
 ---
