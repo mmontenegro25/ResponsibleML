@@ -96,7 +96,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ---
 
-#### Global Variable Importance (Assignment 2)
+#### Global Variable Importance
 
 ![Global Importance](global_importance.PNG)  
 
@@ -104,7 +104,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ---
 
-#### Partial Dependence Plots (Assignment 2)
+#### Partial Dependence Plots
 
 ![Partial Dependence Plots](partial_dependence_plots.png)  
 
@@ -112,7 +112,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ---
 
-#### Fairness Comparison Plot (Assignment 3)
+#### Fairness Comparison Plot
 
 ![AIR and AUC plots](AIR_AUC.png)  
 
