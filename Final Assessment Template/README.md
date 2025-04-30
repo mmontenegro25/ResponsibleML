@@ -143,11 +143,11 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ![Residual Plot](residuals.PNG)  
 
-**Table X.** Residuals Across Subgroups for the Remediated Model.
+**Figure X.** Residuals Across Subgroups for the Remediated Model.
 
 ![Recession Simulation Plot](simulate_recession_conditions.PNG)  
 
-**Table X.** Feature Changes Under Simulated Recession Conditions.
+**Figure X.** Feature Changes Under Simulated Recession Conditions.
 
 ---
 
