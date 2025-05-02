@@ -68,6 +68,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 ### Quantitative Analysis
 
 #### State the metrics used to evaluate your group’s best remediated model
+- We evaluated our best remediated model using AUC for predictive performance and AIR for fairness across demographic groups, selecting a model that balances accuracy with improved equity.
+
 - Models were assessed primarily with AUC and AIR. See details below:
 
 | Train AUC | Validation AUC | Test AUC |
@@ -90,6 +92,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Correlation Heatmap
 
+This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables.
+
 ![Correlation Heatmap](correlation.PNG)
 
 **Figure X.** Correlation Heatmap of Input Features. 
@@ -97,6 +101,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 ---
 
 #### Global Variable Importance
+
+The EBM’s global feature importance highlights which variables most influenced predictions, offering interpretability and transparency.
 
 ![Global Importance](global_importance.PNG)  
 
@@ -106,6 +112,8 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Partial Dependence Plots
 
+These plots illustrate how individual features impact the model’s predictions, revealing trends and thresholds that drive decisions.
+
 ![Partial Dependence Plots](partial_dependence_plots.png)  
 
 **Figure X.** Partial Dependence Plots by Features.
@@ -114,13 +122,17 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Fairness Comparison Plot
 
+This plot visualizes the trade-off between AUC and AIR across candidate models, guiding our selection of a fair and performant solution.
+
 ![AIR and AUC plots](AIR_AUC.png)  
 
 **Figure X.** Relationship Between AIR and AUC for Grid Search Results.
 
 ---
 
-#### Red Teaming (Assignment 4)
+#### Red Teaming 
+
+Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities.
 
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|
@@ -128,7 +140,6 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | High  | 0.92     | 1.00                         | 1.08                  | -0.70               | -2.49      | 0.38                     |
 
 **Table X.** Seed Rows for Adversarial Example Search Using Stolen Model
-
 
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std | phat    |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|---------|
@@ -139,7 +150,9 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 ---
 
-#### Debugging and Residuals (Assignment 5)
+#### Debugging and Residuals
+
+Residual and simulation plots expose subgroup errors and model shifts under economic stress, supporting our fairness and reliability assessment.
 
 ![Residual Plot](residuals.PNG)  
 
