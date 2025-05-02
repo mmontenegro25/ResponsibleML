@@ -152,7 +152,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Debugging and Residuals
 
-- Residual and simulation plots expose subgroup errors and model shifts under economic stress, supporting our fairness and reliability assessment.
+- Residual and simulation plots expose subgroup errors and model shifts under economic stress.
 
 ![Residual Plot](residuals.PNG)  
 
