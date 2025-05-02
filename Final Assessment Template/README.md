@@ -92,7 +92,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Correlation Heatmap
 
-This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables.
+- This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables.
 
 ![Correlation Heatmap](correlation.PNG)
 
@@ -102,7 +102,7 @@ This heatmap shows how input features relate to one another, helping identify re
 
 #### Global Variable Importance
 
-The EBM’s global feature importance highlights which variables most influenced predictions, offering interpretability and transparency.
+- The EBM’s global feature importance highlights which variables most influenced predictions, offering interpretability and transparency.
 
 ![Global Importance](global_importance.PNG)  
 
@@ -112,7 +112,7 @@ The EBM’s global feature importance highlights which variables most influenced
 
 #### Partial Dependence Plots
 
-These plots illustrate how individual features impact the model’s predictions, revealing trends and thresholds that drive decisions.
+- These plots illustrate how individual features impact the model’s predictions, revealing trends and thresholds that drive decisions.
 
 ![Partial Dependence Plots](partial_dependence_plots.png)  
 
@@ -122,7 +122,7 @@ These plots illustrate how individual features impact the model’s predictions,
 
 #### Fairness Comparison Plot
 
-This plot visualizes the trade-off between AUC and AIR across candidate models, guiding our selection of a fair and performant solution.
+- This plot visualizes the trade-off between AUC and AIR across candidate models, guiding our selection of a fair and performant solution.
 
 ![AIR and AUC plots](AIR_AUC.png)  
 
@@ -132,7 +132,7 @@ This plot visualizes the trade-off between AUC and AIR across candidate models, 
 
 #### Red Teaming 
 
-Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities.
+- Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities.
 
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|
@@ -152,7 +152,7 @@ Adversarial examples were used to probe model robustness, revealing inputs that 
 
 #### Debugging and Residuals
 
-Residual and simulation plots expose subgroup errors and model shifts under economic stress, supporting our fairness and reliability assessment.
+- Residual and simulation plots expose subgroup errors and model shifts under economic stress, supporting our fairness and reliability assessment.
 
 ![Residual Plot](residuals.PNG)  
 
