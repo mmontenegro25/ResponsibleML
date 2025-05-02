@@ -102,7 +102,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Global Variable Importance
 
-- The EBM’s global feature importance highlights which variables most influenced predictions, offering interpretability and transparency.
+- The EBM’s global feature importance highlights which variables most influenced predictions.
 
 ![Global Importance](global_importance.PNG)  
 
@@ -112,7 +112,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Partial Dependence Plots
 
-- These plots illustrate how individual features impact the model’s predictions, revealing trends and thresholds that drive decisions.
+- These plots illustrate how individual features impact the model’s predictions.
 
 ![Partial Dependence Plots](partial_dependence_plots.png)  
 
@@ -122,7 +122,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 #### Fairness Comparison Plot
 
-- This plot visualizes the trade-off between AUC and AIR across candidate models, guiding our selection of a fair and performant solution.
+- This plot visualizes the trade-off between AUC and AIR across candidate models.
 
 ![AIR and AUC plots](AIR_AUC.png)  
 
