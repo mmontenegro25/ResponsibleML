@@ -22,32 +22,28 @@
 ### Training Data
 
 * **Source of training data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
-* **Training data and validation data split**:  70% of the data was used for training, and 30% for validation.
-* **Number of rows in training and validation data**:  
-** Training data: 160,338 rows
-** Validation data: 19,831 rows
+* **Training data and validation data split**: Of the 180,169 data points, 70% was assigned to the training data and 30% to the validation data. 
+* **Number of rows in training and validation data**:
+  * <u>Training data</u>: 160,338 rows
+  * <u>Validation data</u>: 19,831 rows
 
 * **Data dictionary**: 
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
-|**ID**| ID | int | unique row indentifier |
-| **LIMIT_BAL** | input | float | amount of previously awarded credit |
-| **SEX** | demographic information | int | 1 = male; 2 = female
-| **RACE** | demographic information | int | 1 = hispanic; 2 = black; 3 = white; 4 = asian |
-| **EDUCATION** | demographic information | int | 1 = graduate school; 2 = university; 3 = high school; 4 = others |
-| **MARRIAGE** | demographic information | int | 1 = married; 2 = single; 3 = others |
-| **AGE** | demographic information | int | age in years |
-| **PAY_0, PAY_2 - PAY_6** | inputs | int | history of past payment; PAY_0 = the repayment status in September, 2005; PAY_2 = the repayment status in August, 2005; ...; PAY_6 = the repayment status in April, 2005. The measurement scale for the repayment status is: -1 = pay duly; 1 = payment delay for one month; 2 = payment delay for two months; ...; 8 = payment delay for eight months; 9 = payment delay for nine months and above |
-| **BILL_AMT1 - BILL_AMT6** | inputs | float | amount of bill statement; BILL_AMNT1 = amount of bill statement in September, 2005; BILL_AMT2 = amount of bill statement in August, 2005; ...; BILL_AMT6 = amount of bill statement in April, 2005 |
-| **PAY_AMT1 - PAY_AMT6** | inputs | float | amount of previous payment; PAY_AMT1 = amount paid in September, 2005; PAY_AMT2 = amount paid in August, 2005; ...; PAY_AMT6 = amount paid in April, 2005 |
-| **DELINQ_NEXT**| target | int | whether a customer's next payment is delinquent (late), 1 = late; 0 = on-time |
+|**conforming**| input | binary | whether the mortgage conforms to normal standards (1), or whether the loan is different (0), e.g., jumbo, HELOC, reverse mortgage, etc. |
+| **debt_to_income_ratio_std** | input | numeric | standardized debt-to-income ratio for mortgage applicants |
+| **debt_to_income_ratio_missing** | input | binary | missing marker (1) for debt to income ratio std. |
+| **income_std** | input | numeric | standardized income for mortgage applicants |
+| **loan_amount_std** | input | numeric | standardized amount of the mortgage for applicants |
+| **intro_rate_std** | input | numeric |  standardized introductory rate period for mortgage applicants |
+| **loan_to_value_ratio_std** | input | numeric | ratio of the mortgage size to the value of the property for mortgage applicants |
+| **no_intro_rate_period_std** | input | binary | whether or not a mortgage does not include an introductory rate period |
+| **property_value_std** | input | numeric | value of the mortgaged property |
+| **term_360** | input | binary | whether the mortgage is a standard 360 month mortgage (1) or a different type of mortgage (0) |
+| **high_priced**| engineered | binary | whether (1) or not (0) the annual percentage rate (APR) charged for a mortgage is
+150 basis points (1.5%) or more above a survey-based estimate of similar mortgages |
 
-* **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **How training data was divided into training and validation data**: 50% training, 25% validation, 25% test
-* **Number of rows in training and validation data**:
-  * Training rows: 15,000
-  * Validation rows: 7,500
 
 ### Test Data
 * **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
