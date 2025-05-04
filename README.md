@@ -104,11 +104,11 @@
 
 **NOTE**:
 * Train AUC and Validation AUC values from [this notebook] **UPDATE!!**
- * Validation values detailed in cell 67 with the following code - **UPDATE!!**
-  * best_ebm_train = ROC(best_ebm_no_grid.predict_proba).explain_perf(train[features], train[target])
-  * print('Train AUC: %.4f.' % best_ebm_train._internal_obj['overall']['auc'])
-  * best_ebm_perf = ROC(best_ebm_no_grid.predict_proba).explain_perf(valid[features], valid[target])
-  * print('Validation AUC: %.4f.' % best_ebm_perf._internal_obj['overall']['auc'])
+  * Validation values detailed in cell 67 with the following code - **UPDATE!!**
+    * best_ebm_train = ROC(best_ebm_no_grid.predict_proba).explain_perf(train[features], train[target])
+    * print('Train AUC: %.4f.' % best_ebm_train._internal_obj['overall']['auc'])
+    * best_ebm_perf = ROC(best_ebm_no_grid.predict_proba).explain_perf(valid[features], valid[target])
+    * print('Validation AUC: %.4f.' % best_ebm_perf._internal_obj['overall']['auc'])
 * Test AUC taken from Professor Hall's [evaluation results](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2025_04_14_10_28_13.csv).
 
 **Table 4 Validation AIR Values for Race and Sex Groups**
