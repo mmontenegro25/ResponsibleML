@@ -44,8 +44,7 @@
 | **no_intro_rate_period_std** | input | binary | whether or not a mortgage does not include an introductory rate period |
 | **property_value_std** | input | numeric | value of the mortgaged property |
 | **term_360** | input | binary | whether the mortgage is a standard 360 month mortgage (1) or a different type of mortgage (0) |
-| **high_priced**| engineered | binary | whether (1) or not (0) the annual percentage rate (APR) charged for a mortgage is
-150 basis points (1.5%) or more above a survey-based estimate of similar mortgages |
+| **high_priced**| engineered | binary | whether (1) or not (0) the annual percentage rate (APR) charged for a mortgage is 150 basis points (1.5%) or more above a survey-based estimate of similar mortgages |
 
 
 ### Test Data
