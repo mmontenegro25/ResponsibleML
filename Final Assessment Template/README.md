@@ -30,7 +30,7 @@
   * <u>Training data</u>: 160,338 rows
   * <u>Validation data</u>: 19,831 rows
 
-* **Data dictionary**: 
+* **Table 1.** Data dictionary
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
@@ -47,30 +47,37 @@
 | **high_priced**| engineered | binary | whether (1) or not (0) the annual percentage rate (APR) charged for a mortgage is 150 basis points (1.5%) or more above a survey-based estimate of similar mortgages |
 
 
-### Test Data
-* **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **Number of rows in test data**: 7,500
-* **State any differences in columns between training and test data**: None
+## Evaluation Data
+* **Source of test data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
+* **Number of rows in test data**: 19,831 rows
+* **State any differences in columns between training and test data**: Evaluation or “test” data contains one additional column titled “High Priced”. This is a binary target where 1 or 0 indicate whether the APR charged for the mortgage is 1.5% or more. 
 
-### Model details
-* **Columns used as inputs in the final model**: 'LIMIT_BAL',
-       'PAY_0', 'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1',
-       'BILL_AMT2', 'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6',
-       'PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6'
-* **Column(s) used as target(s) in the final model**: 'DELINQ_NEXT'
-* **Type of model**: Decision Tree 
-* **Software used to implement the model**: Python, scikit-learn
-* **Version of the modeling software**: 0.22.2.post1
-* **Hyperparameters or other settings of your model**: 
-```
-DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
-                       max_depth=6, max_features=None, max_leaf_nodes=None,
-                       min_impurity_decrease=0.0, min_impurity_split=None,
-                       min_samples_leaf=1, min_samples_split=2,
-                       min_weight_fraction_leaf=0.0, presort='deprecated',
-                       random_state=12345, splitter='best')
-```
-### Quantitative Analysis
+## Model details
+* **Columns used as inputs in the final model**:'intro_rate_period_std', 'debt_to_icnome_ratio_std', 'term_360', 'property_value_std', 'income_std', and 'debt_to_income_ratio_missing'.
+* **Column(s) used as target(s) in the final model**: 'high_priced'
+* **Type of model**: Explainable Boosting Machine (EBM).
+* **Software used to implement the model**: Python and the 'interpret' package. Specifically using interpret’s class ExplainableBoostingClassifier. 
+* **Version of the modeling software**:'interpret' version 0.6.9.
+* **Hyperparameters or other settings of your model**:
+
+**Table 2.** Hyperparameters used in EBM model.
+
+| **Hyperparameter** | **Value **|
+| --------- | -------------- | -------- |
+|'max_bins'| 1024 |
+|'max_interaction_bins'| 24 |
+|'interactions'| 5 |
+|'outer_bags'| 8 |
+|'inner_bags'| 0 |
+|'learning_rate'| 0.01 |
+|'validation_size'| 0.05 |
+|'min_samples_leaf'| 1 |
+|'max_leaves'| 5 |
+|'early_stopping_rounds'| 100 |
+|'n_jobs'| 4 |
+|'random_state'| 12345 |
+
+## Quantitative Analysis
 
 #### State the metrics used to evaluate your group’s best remediated model
 - We evaluated our best remediated model using AUC for predictive performance and AIR for fairness across demographic groups, selecting a model that balances accuracy with improved equity.
@@ -81,7 +88,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | --------- | -------------- | -------- |
 | 0.8305 | 0.8254 | 0.8298 |
 
-**Table X.** AUC values across data partitions. 
+**Table 3.** AUC values across data partitions. 
 
 
 | Group               | Validation AIR |
@@ -90,18 +97,17 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 | Asian vs. White      | 1.154 |
 | Female vs. Male      | 0.962 |
 
-**Table X.** Validation AIR values for race and sex groups. 
+**Table 4.** Validation AIR values for race and sex groups. 
 
-(**HINT**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
-
+(**NOTE**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
 
 #### Correlation Heatmap
 
 - This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables.
 
-![Correlation Heatmap](correlation.PNG)
+**Figure 1.** Correlation Heatmap of Input Features. 
 
-**Figure X.** Correlation Heatmap of Input Features. 
+![Correlation Heatmap](correlation.PNG)
 
 ---
 
@@ -109,9 +115,9 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 - The EBM’s global feature importance highlights which variables most influenced predictions.
 
-![Global Importance](global_importance.PNG)  
+**Figure 2.** Global Feature Importance of the Remediated EBM Model.
 
-**Figure X.** Global Feature Importance of the Remediated EBM Model.
+![Global Importance](global_importance.PNG)  
 
 ---
 
@@ -119,19 +125,19 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 - These plots illustrate how individual features impact the model’s predictions.
 
-![Partial Dependence Plots](partial_dependence_plots.png)  
+**Figure 3.** Partial Dependence Plots by Features.
 
-**Figure X.** Partial Dependence Plots by Features.
+![Partial Dependence Plots](partial_dependence_plots.png)  
 
 ---
 
 #### Fairness Comparison Plot
 
 - This plot visualizes the trade-off between AUC and AIR across candidate models.
+  
+**Figure 4.** Relationship Between AIR and AUC for Grid Search Results.
 
 ![AIR and AUC plots](AIR_AUC.png)  
-
-**Figure X.** Relationship Between AIR and AUC for Grid Search Results.
 
 ---
 
@@ -139,19 +145,19 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 - Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities.
 
+**Table 5.** Seed Rows for Adversarial Example Search Using Stolen Model
+
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|
 | Low   | 0.89     | 0.00                         | 4.37                  | 0.11                | 46.23      | 1.04                     |
 | High  | 0.92     | 1.00                         | 1.08                  | -0.70               | -2.49      | 0.38                     |
 
-**Table X.** Seed Rows for Adversarial Example Search Using Stolen Model
+**Table 6.** Performance Degradation Under Perturbed Inputs (Adversarial Examples)
 
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std | phat    |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|---------|
 | Low   | 0.00     | 0.00                         | 9.09                  | 18.14               | 46.23      | -1.34                    | 7.41e-08|
 | High  | 1.00     | 1.00                         | 0.02                  | -4.95               | -2.49      | 3.34                     | 0.91    |
-
-**Table X.** Performance Degradation Under Perturbed Inputs (Adversarial Examples)
 
 ---
 
@@ -159,14 +165,26 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 
 - Residual and simulation plots expose subgroup errors and model shifts under economic stress.
 
+**Figure 5.** Residuals Across Subgroups for the Remediated Model
+
 ![Residual Plot](residuals.PNG)  
 
-**Figure X.** Residuals Across Subgroups for the Remediated Model.
+**Figure 6.** Feature Changes Under Simulated Recession Conditions
 
 ![Recession Simulation Plot](simulate_recession_conditions.PNG)  
 
-**Figure X.** Feature Changes Under Simulated Recession Conditions.
-
 ---
+
+## Ethical Considerations 
+
+* **Potential Negative Impacts of Using Our Group’s Best Remediated Model**: We used explainable boosting machine (EBM) and logistic regression (GLM) for our remediated model. Here we identified a few possible risks in the model’s math and software implementation. First, if the input data contains outliers or missing values that were not handled during preprocessing, predictions might be unreliable. Also, since we used the interpret package and EBM, any future updates in the software version could affect reproducibility or compatibility of results.
+
+* **Real-World Risks (Who, What, When, How)**: Our model is designed to predict whether a loan is high-priced to support fairness monitoring. However, if the model is used beyond this purpose such as for loan approval or rejection decisions it could unintentionally harm applicants. Errors or biases could especially affect minority groups, leading to unfair outcomes if the model is deployed without human oversight or further validation.
+
+* **Potential Uncertainties Relating to the Impacts of the Model**: We observed that the Asian vs. White AIR = 1.154, which suggests a slight over-correction favoring Asian applicants. It is uncertain whether this result fully reflects fairness or introduces a new imbalance. Small changes in model parameters or training data could lead to different fairness metrics.
+
+* **Real-World Risks (Who, What, When, How)**: There is uncertainty about how the model’s fairness metrics would hold up if applied to new data or under different lending environments. If used without continuous monitoring, the model might miss new unfair patterns that could hurt underrepresented groups.
+
+* **Unexpected Results Encountered During Training**: We noticed that the AIR for Asian vs. White was above 1.0 (1.154), which was unexpected because we aimed for parity across groups. This indicates that our remediation process may have slightly favored one group. We also found that some features had lower-than-expected variable importance, suggesting that certain predictors contributed less to the model than anticipated.
 
 
