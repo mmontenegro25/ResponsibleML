@@ -53,7 +53,7 @@
 * **State any differences in columns between training and test data**: Evaluation or “test” data contains one additional column titled “High Priced”. This is a binary target where 1 or 0 indicate whether the APR charged for the mortgage is 1.5% or more. 
 
 ## Model details
-* **Columns used as inputs in the final model**:'intro_rate_period_std', 'debt_to_icnome_ratio_std', 'term_360', 'property_value_std', 'income_std', and 'debt_to_income_ratio_missing'.
+* **Columns used as inputs in the final model**:'intro_rate_period_std', 'debt_to_income_ratio_std', 'term_360', 'property_value_std', 'income_std', and 'debt_to_income_ratio_missing'.
 * **Column(s) used as target(s) in the final model**: 'high_priced'
 * **Type of model**: Explainable Boosting Machine (EBM).
 * **Software used to implement the model**: Python and the 'interpret' package. Specifically using interpret’s class ExplainableBoostingClassifier. 
@@ -62,20 +62,20 @@
 
 **Table 2. Hyperparameters Used in the EBM Model**
 
-| **Hyperparameter** | **Value** |
-| --------- | -------------- | -------- |
-|'max_bins'| 1024 |
-|'max_interaction_bins'| 24 |
-|'interactions'| 5 |
-|'outer_bags'| 8 |
-|'inner_bags'| 0 |
-|'learning_rate'| 0.01 |
-|'validation_size'| 0.05 |
-|'min_samples_leaf'| 1 |
-|'max_leaves'| 5 |
-|'early_stopping_rounds'| 100 |
-|'n_jobs'| 4 |
-|'random_state'| 12345 |
+| Hyperparameter | Value | 
+| ---- | ------------- |
+| **'max_bins'** | 1024 |
+| **'max_interaction_bins'** | 24 | 
+| **'interactions'** | 5 | 
+| **'outer_bags'** | 8 | 
+| **'inner_bags'** | 0 | 
+| **'learning_rate'** | 0.01 | 
+| **'validation_size'** | 0.05 |
+| **'min_samples_leaf'** | 1 |
+| **'max_leaves'** | 5 | 
+| **'early_stopping_rounds'** | 100 |
+| **'n_jobs'** | 4 |
+| **'random_state'** | 12345 | 
 
 ## Quantitative Analysis
 
@@ -88,17 +88,19 @@
 
 | Train AUC | Validation AUC | Test AUC |
 | --------- | -------------- | -------- |
-| 0.8305 | 0.8254 | 0.8298 |
+| 0.8305 | 0.7815 | 0.796 |
 
 **Table 4 Validation AIR Values for Race and Sex Groups**
 
 | Group               | Validation AIR |
 | ------------------- | -------------- |
-| Black vs. White      | 0.791 |
-| Asian vs. White      | 1.154 |
-| Female vs. Male      | 0.962 |
+| Asian vs. White      | 1.124 |
+| Black vs. White      | 0.826 |
+| Female vs. Male      | 0.967 |
 
-(**NOTE**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
+**NOTE**:
+ * Train AUC, Validation AUC and Validation AIR value's taken from [this notebook](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb)
+ * Test AUC taken from Professor Hall's [evaluation results](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2025_04_14_10_28_13.csv)
 
 #### Correlation Heatmap
 
@@ -166,11 +168,15 @@
 **Figure 6. Feature Changes Under Simulated Recession Conditions**
 ![Recession Simulation Plot](figure6_simulate_recession_conditions.PNG)  
 
+
+**Other Alternative Models Considered**:
+* <u>Elastic Net</u>:
+* <u>Monotonic Gradient Boosting Machines (MGBM)</u>:
 ---
 
 ## Ethical Considerations 
 
-* **Potential Negative Impacts of Using Our Group’s Best Remediated Model**: We used explainable boosting machine (EBM) and logistic regression (GLM) for our remediated model. Here we identified a few possible risks in the model’s math and software implementation. First, if the input data contains outliers or missing values that were not handled during preprocessing, predictions might be unreliable. Also, since we used the interpret package and EBM, any future updates in the software version could affect reproducibility or compatibility of results.
+* **Potential Negative Impacts of Using Our Group’s Best Remediated Model**: We used explainable boosting machine (EBM) and logistic regression (GLM) for our remediated model. Here we identified a few possible risks in the model’s math and software implementation. First, if the input data contains outliers or missing values that were not handled during preprocessing, predictions might be unreliable. Also, since we used the 'interpret' package and EBM, any future updates in the software version could affect reproducibility or compatibility of results.
 
 * **Real-World Risks (Who, What, When, How)**: Our model is designed to predict whether a loan is high-priced to support fairness monitoring. However, if the model is used beyond this purpose such as for loan approval or rejection decisions it could unintentionally harm applicants. Errors or biases could especially affect minority groups, leading to unfair outcomes if the model is deployed without human oversight or further validation.
 
