@@ -24,7 +24,7 @@
 
 ## ⚙️ Training Data
 
-* **Source of training data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
+* **Source of training data**: Historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
 * **Training data and validation data split**: Of the 180,169 data points, 70% was assigned to the training data and 30% to the validation data. 
 * **Number of rows in training and validation data**:
   * Training data: 160,338 rows.
@@ -34,6 +34,18 @@
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
+|**row_ID**| ID | integer | unique row indentifier |
+| **black** | demographic information | float | whether the mortage holder identifies as black (1.0) or not (0.0); contains null values |
+| **asian** | demographic information | float | whether the mortage holder identifies as asian (1.0) or not (0.0); contains null values |
+| **white** | demographic information | float | whether the mortage holder identifies as white (1.0) or not (0.0); contains null values |
+| **amind** | demographic information | float | whether the mortage holder identifies as American Indian (1.0) or not (0.0); contains null values |
+| **hipac** | demographic information | float | whether the mortage holder identifies as Native Hawaiian or Other Pacific Islander (1.0) or not (0.0); contains null values |
+| **hispanic** | demographic information | float | whether the mortage holder identifies as hispanic (1.0) or not (0.0); contains null values |
+| **non_hispanic** | demographic information | float | whether the mortage holder identifies as non-hispanic (1.0) or not (0.0); contains null values |
+| **male** | demographic information | float | whether the mortage holder identifies as male (1.0) or not (0.0); contains null values |
+| **female** | demographic information | float | whether the mortage holder identifies as female (1.0) or not (0.0); contains null values |
+| **agete62** | demographic information | float | whether the mortage holder's age is greater than or equal to 62(1.0) or not (0.0); contains null values |
+| **agelt62** | demographic information | float | whether the mortage holder's age is less than 62 (1.0) or not (0.0); contains null values |
 |**conforming**| input | binary | whether the mortgage conforms to normal standards (1), or whether the loan is different (0), e.g., jumbo, HELOC, reverse mortgage, etc. |
 | **debt_to_income_ratio_std** | input | numeric | standardized debt-to-income ratio for mortgage applicants |
 | **debt_to_income_ratio_missing** | input | binary | missing marker (1) for debt to income ratio std. |
@@ -48,7 +60,7 @@
 
 
 ## ⚙️ Evaluation Data
-* **Source of test data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
+* **Source of test data**: Historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
 * **Number of rows in test data**: 19,831 rows.
 * **State any differences in columns between training and test data**: Evaluation or “test” data contains one additional column titled “High Priced”. This is a binary target where 1 or 0 indicate whether the APR charged for the mortgage is 1.5% or more. 
 
