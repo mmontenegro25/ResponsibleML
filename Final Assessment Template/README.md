@@ -30,7 +30,7 @@
   * <u>Training data</u>: 160,338 rows
   * <u>Validation data</u>: 19,831 rows
 
-* **Table 1.** Data dictionary
+* **Table 1. Data dictionary**
 
 | Name | Modeling Role | Measurement Level| Description|
 | ---- | ------------- | ---------------- | ---------- |
@@ -60,7 +60,7 @@
 * **Version of the modeling software**:'interpret' version 0.6.9.
 * **Hyperparameters or other settings of your model**:
 
-**Table 2.** Hyperparameters used in EBM model.
+**Table 2. Hyperparameters Used in the EBM Model**
 
 | **Hyperparameter** | **Value **|
 | --------- | -------------- | -------- |
@@ -84,12 +84,13 @@
 
 - Models were assessed primarily with AUC and AIR. See details below:
 
+**Table 3. AUC Values Across Data Partitions** 
+
 | Train AUC | Validation AUC | Test AUC |
 | --------- | -------------- | -------- |
 | 0.8305 | 0.8254 | 0.8298 |
 
-**Table 3.** AUC values across data partitions. 
-
+**Table 4 Validation AIR Values for Race and Sex Groups**
 
 | Group               | Validation AIR |
 | ------------------- | -------------- |
@@ -97,16 +98,13 @@
 | Asian vs. White      | 1.154 |
 | Female vs. Male      | 0.962 |
 
-**Table 4.** Validation AIR values for race and sex groups. 
-
 (**NOTE**: Test AUC taken from [evaluation results here](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb))
 
 #### Correlation Heatmap
 
 - This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables.
 
-**Figure 1.** Correlation Heatmap of Input Features. 
-
+**Figure 1. Correlation Heatmap of Input Features**
 ![Correlation Heatmap](correlation.PNG)
 
 ---
@@ -115,8 +113,7 @@
 
 - The EBM’s global feature importance highlights which variables most influenced predictions.
 
-**Figure 2.** Global Feature Importance of the Remediated EBM Model.
-
+**Figure 2. Global Feature Importance of the Remediated EBM Model**
 ![Global Importance](global_importance.PNG)  
 
 ---
@@ -125,8 +122,7 @@
 
 - These plots illustrate how individual features impact the model’s predictions.
 
-**Figure 3.** Partial Dependence Plots by Features.
-
+**Figure 3. Partial Dependence Plots by Features**
 ![Partial Dependence Plots](partial_dependence_plots.png)  
 
 ---
@@ -135,8 +131,7 @@
 
 - This plot visualizes the trade-off between AUC and AIR across candidate models.
   
-**Figure 4.** Relationship Between AIR and AUC for Grid Search Results.
-
+**Figure 4. Relationship Between AIR and AUC for Grid Search Results**
 ![AIR and AUC plots](AIR_AUC.png)  
 
 ---
@@ -145,14 +140,14 @@
 
 - Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities.
 
-**Table 5.** Seed Rows for Adversarial Example Search Using Stolen Model
+**Table 5. Seed Rows for Adversarial Example Search Using Stolen Model**
 
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|
 | Low   | 0.89     | 0.00                         | 4.37                  | 0.11                | 46.23      | 1.04                     |
 | High  | 0.92     | 1.00                         | 1.08                  | -0.70               | -2.49      | 0.38                     |
 
-**Table 6.** Performance Degradation Under Perturbed Inputs (Adversarial Examples)
+**Table 6. Performance Degradation Under Perturbed Inputs (Adversarial Examples)**
 
 | Type  | term_360 | debt_to_income_ratio_missing | intro_rate_period_std | property_value_std | income_std | debt_to_income_ratio_std | phat    |
 |-------|----------|------------------------------|-----------------------|---------------------|------------|--------------------------|---------|
@@ -165,12 +160,10 @@
 
 - Residual and simulation plots expose subgroup errors and model shifts under economic stress.
 
-**Figure 5.** Residuals Across Subgroups for the Remediated Model
-
+**Figure 5. Residuals Across Subgroups for the Remediated Model**
 ![Residual Plot](residuals.PNG)  
 
-**Figure 6.** Feature Changes Under Simulated Recession Conditions
-
+**Figure 6. Feature Changes Under Simulated Recession Conditions**
 ![Recession Simulation Plot](simulate_recession_conditions.PNG)  
 
 ---
