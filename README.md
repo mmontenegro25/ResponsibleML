@@ -102,9 +102,14 @@
 | --------- | -------------- | -------- |
 | 0.8305 | 0.8254 | 0.796 |
 
+> **Note:** HW 3, cell 67 
+> 
 > **Note:** best_ebm_train = ROC(best_ebm_no_grid.predict_proba).explain_perf(train[features], train[target])
+>
 > **Note:** print('Train AUC: %.4f.' % best_ebm_train._internal_obj['overall']['auc'])
+> 
 > **Note:** best_ebm_perf = ROC(best_ebm_no_grid.predict_proba).explain_perf(valid[features], valid[target])
+> 
 > **Note:** print('Validation AUC: %.4f.' % best_ebm_perf._internal_obj['overall']['auc'])
 
 
