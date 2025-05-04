@@ -1,6 +1,6 @@
-# Mortage Rates Model Card
+# 📝 Model Card: Lending Bias-Remediated Model
 
-### Basic Information
+## Basic Information
 * **Person or organization developing model**:  
   Patrick Hall - `jphall@gwu.edu`  
   Bethel Mandizha - `bethel.mandizha@gwmail.gwu.edu`  
@@ -13,13 +13,13 @@
 * **License**: Apache License, Version 2.0
 * **Model implementation code**: [Group 3_Model.ipynb]([https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb])
 
-### Intended Use
+## Intended Use
 * **Describe the business value of your group’s best remediated model**: Our group's best remediated model assists mortgage lenders in making more equitable decisions about loan pricing by predicting whether a loan is high-priced, while minimizing demographic biases across race, gender, and age categories.
 * **Describe how your group’s best remediated model is designed to be used**: The model predicts whether an applicant would receive a high-priced loan, allowing the lender to monitor disparities, detect potential fairness violations, and adjust practices to promote compliance and equity.
 * **Describe the intended users for your group’s best remediated model**: Mortgage risk analysts, compliance officers, fair lending auditors, and regulatory reporting teams.
 * **State whether your group’s best remediated model can or cannot be used for any additional purposes**: This model should not be used for final loan approval decisions, criminal justice predictions, insurance assessments, or employment-related evaluations without retraining and thorough validation for new use cases
 
-### Training Data
+## Training Data
 
 * **Source of training data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
 * **Training data and validation data split**: Of the 180,169 data points, 70% was assigned to the training data and 30% to the validation data. 
