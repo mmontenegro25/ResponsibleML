@@ -182,8 +182,8 @@
 
 
 **Other Alternative Models Considered**:
-* Elastic Net:
-* Monotonic Gradient Boosting Machines (MGBM):
+* **Elastic Net**:
+* **Monotonic Gradient Boosting Machines (MGBM)**:
 ---
 
 ## 🧾 Ethical Considerations 
