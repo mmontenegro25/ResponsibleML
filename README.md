@@ -13,7 +13,7 @@
 * **License**: Apache License, Version 2.0
 * **Model implementation code**: [Group 3_Model.ipynb](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb)
 
-## Intended Use
+## 📌 Intended Use
 * **Describe the business value of your group’s best remediated model**: Our group's best remediated model assists mortgage lenders in making more equitable decisions about loan pricing by predicting whether a loan is high-priced, while minimizing demographic biases across race, gender, and age categories.
   
 * **Describe how your group’s best remediated model is designed to be used**: The model predicts whether an applicant would receive a high-priced loan, allowing the lender to monitor disparities, detect potential fairness violations, and adjust practices to promote compliance and equity.
@@ -22,13 +22,13 @@
   
 * **State whether your group’s best remediated model can or cannot be used for any additional purposes**: This model should not be used for final loan approval decisions, criminal justice predictions, insurance assessments, or employment-related evaluations without retraining and thorough validation for new use cases
 
-## Training Data
+## ⚙️ Training Data
 
 * **Source of training data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
 * **Training data and validation data split**: Of the 180,169 data points, 70% was assigned to the training data and 30% to the validation data. 
 * **Number of rows in training and validation data**:
-  * <u> Training data </u>: 160,338 rows.
-  * <u> Validation data </u>: 19,831 rows.
+  * Training data: 160,338 rows.
+  * Validation data: 19,831 rows.
 
 * **Table 1. Data dictionary**
 
@@ -47,12 +47,12 @@
 | **high_priced**| engineered | binary | whether (1) or not (0) the annual percentage rate (APR) charged for a mortgage is 150 basis points (1.5%) or more above a survey-based estimate of similar mortgages |
 
 
-## Evaluation Data
+## ⚙️ Evaluation Data
 * **Source of test data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
 * **Number of rows in test data**: 19,831 rows.
 * **State any differences in columns between training and test data**: Evaluation or “test” data contains one additional column titled “High Priced”. This is a binary target where 1 or 0 indicate whether the APR charged for the mortgage is 1.5% or more. 
 
-## Model details
+## 🔍 Model details
 * **Columns used as inputs in the final model**:'intro_rate_period_std', 'debt_to_income_ratio_std', 'term_360', 'property_value_std', 'income_std', and 'debt_to_income_ratio_missing'.
 * **Column(s) used as target(s) in the final model**: 'high_priced'.
 * **Type of model**: Explainable Boosting Machine (EBM).
@@ -77,7 +77,7 @@
 | **'n_jobs'** | 4 |
 | **'random_state'** | 12345 | 
 
-## Quantitative Analysis
+## 🧠 Quantitative Analysis
 
 #### State the metrics used to evaluate your group’s best remediated model:
 - We evaluated our best remediated model using AUC for predictive performance and AIR for fairness across demographic groups, selecting a model that balances accuracy with improved equity.
@@ -170,11 +170,11 @@
 
 
 **Other Alternative Models Considered**:
-* <u> Elastic Net </u>:
-* <u> Monotonic Gradient Boosting Machines (MGBM) </u>:
+* Elastic Net:
+* Monotonic Gradient Boosting Machines (MGBM):
 ---
 
-## Ethical Considerations 
+## 🧾 Ethical Considerations 
 
 * **Potential Negative Impacts of Using Our Group’s Best Remediated Model**: We used explainable boosting machine (EBM) and logistic regression (GLM) for our remediated model. Here we identified a few possible risks in the model’s math and software implementation. First, if the input data contains outliers or missing values that were not handled during preprocessing, predictions might be unreliable. Also, since we used the 'interpret' package and EBM, any future updates in the software version could affect reproducibility or compatibility of results.
 
