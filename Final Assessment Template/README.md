@@ -11,7 +11,7 @@
 * **Model date**: May, 2025 
 * **Model version**: 1.0  
 * **License**: Apache License, Version 2.0
-* **Model implementation code**: [Group 3_Model.ipynb]([https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb])
+* **Model implementation code**: [Group 3_Model.ipynb](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb)
 
 ## Intended Use
 * **Describe the business value of your group’s best remediated model**: Our group's best remediated model assists mortgage lenders in making more equitable decisions about loan pricing by predicting whether a loan is high-priced, while minimizing demographic biases across race, gender, and age categories.
