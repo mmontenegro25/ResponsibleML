@@ -15,8 +15,11 @@
 
 ## Intended Use
 * **Describe the business value of your group’s best remediated model**: Our group's best remediated model assists mortgage lenders in making more equitable decisions about loan pricing by predicting whether a loan is high-priced, while minimizing demographic biases across race, gender, and age categories.
+  
 * **Describe how your group’s best remediated model is designed to be used**: The model predicts whether an applicant would receive a high-priced loan, allowing the lender to monitor disparities, detect potential fairness violations, and adjust practices to promote compliance and equity.
+  
 * **Describe the intended users for your group’s best remediated model**: Mortgage risk analysts, compliance officers, fair lending auditors, and regulatory reporting teams.
+  
 * **State whether your group’s best remediated model can or cannot be used for any additional purposes**: This model should not be used for final loan approval decisions, criminal justice predictions, insurance assessments, or employment-related evaluations without retraining and thorough validation for new use cases
 
 ## Training Data
