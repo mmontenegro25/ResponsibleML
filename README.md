@@ -112,7 +112,6 @@
 > 
 > **Note:** print('Validation AUC: %.4f.' % best_ebm_perf._internal_obj['overall']['auc'])
 
-
 **Table 4 Validation AIR Values for Race and Sex Groups**
 
 | Group               | Validation AIR |
