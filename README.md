@@ -193,8 +193,9 @@
 
 
 **Other Alternative Models Considered**:
-* **Elastic Net**:
-* **Monotonic Gradient Boosting Machines (MGBM)**:
+* **Elastic Net**: Achieved a validation AUC of 0.7538, offering good interpretability but struggling with non-linear relationships compared to other models.
+* **Monotonic Gradient Boosting Machines (MGBM)**: With a validation AUC of 0.7945, it performed better but was more complex and less interpretable than the EBM, making it less ideal.
+
 ---
 
 ## 🧾 Ethical Considerations 
