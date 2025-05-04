@@ -62,7 +62,7 @@
 
 **Table 2. Hyperparameters Used in the EBM Model**
 
-| **Hyperparameter** | **Value **|
+| **Hyperparameter** | **Value** |
 | --------- | -------------- | -------- |
 |'max_bins'| 1024 |
 |'max_interaction_bins'| 24 |
