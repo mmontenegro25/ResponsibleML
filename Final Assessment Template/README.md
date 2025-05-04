@@ -27,8 +27,8 @@
 * **Source of training data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
 * **Training data and validation data split**: Of the 180,169 data points, 70% was assigned to the training data and 30% to the validation data. 
 * **Number of rows in training and validation data**:
-  * <u>Training data</u>: 160,338 rows
-  * <u>Validation data</u>: 19,831 rows
+  * <u> Training data </u>: 160,338 rows.
+  * <u> Validation data </u>: 19,831 rows.
 
 * **Table 1. Data dictionary**
 
@@ -49,14 +49,14 @@
 
 ## Evaluation Data
 * **Source of test data**: Preprocessed historical mortgage lending records from the Home Mortgage Disclosure Act (HMDA) datasets.
-* **Number of rows in test data**: 19,831 rows
+* **Number of rows in test data**: 19,831 rows.
 * **State any differences in columns between training and test data**: Evaluation or “test” data contains one additional column titled “High Priced”. This is a binary target where 1 or 0 indicate whether the APR charged for the mortgage is 1.5% or more. 
 
 ## Model details
 * **Columns used as inputs in the final model**:'intro_rate_period_std', 'debt_to_income_ratio_std', 'term_360', 'property_value_std', 'income_std', and 'debt_to_income_ratio_missing'.
-* **Column(s) used as target(s) in the final model**: 'high_priced'
+* **Column(s) used as target(s) in the final model**: 'high_priced'.
 * **Type of model**: Explainable Boosting Machine (EBM).
-* **Software used to implement the model**: Python and the 'interpret' package. Specifically using interpret’s class ExplainableBoostingClassifier. 
+* **Software used to implement the model**: Python and the 'interpret' package. Specifically using 'interpret'’s class ExplainableBoostingClassifier. 
 * **Version of the modeling software**:'interpret' version 0.6.9.
 * **Hyperparameters or other settings of your model**:
 
@@ -79,7 +79,7 @@
 
 ## Quantitative Analysis
 
-#### State the metrics used to evaluate your group’s best remediated model
+#### State the metrics used to evaluate your group’s best remediated model:
 - We evaluated our best remediated model using AUC for predictive performance and AIR for fairness across demographic groups, selecting a model that balances accuracy with improved equity.
 
 - Models were assessed primarily with AUC and AIR. See details below:
@@ -99,8 +99,8 @@
 | Female vs. Male      | 0.967 |
 
 **NOTE**:
- * Train AUC, Validation AUC and Validation AIR value's taken from [this notebook](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb)
- * Test AUC taken from Professor Hall's [evaluation results](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2025_04_14_10_28_13.csv)
+ * Train AUC, Validation AUC and Validation AIR value's taken from [this notebook](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%203/group3_assignment3_higherAUC.ipynb).
+ * Test AUC taken from Professor Hall's [evaluation results](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2025_04_14_10_28_13.csv).
 
 #### Correlation Heatmap
 
@@ -140,7 +140,7 @@
 
 #### Red Teaming 
 
-- Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities.
+- Adversarial examples were used to probe model robustness, revealing inputs that cause prediction degradation and exposing vulnerabilities. Below please find further information regarding the adversarial examples: 
 
 **Table 5. Seed Rows for Adversarial Example Search Using Stolen Model**
 
@@ -160,7 +160,7 @@
 
 #### Debugging and Residuals
 
-- Residual and simulation plots expose subgroup errors and model shifts under economic stress.
+* Residual and simulation plots expose subgroup errors and model shifts under economic stress:
 
 **Figure 5. Residuals Across Subgroups for the Remediated Model**
 ![Residual Plot](figure5_residuals.PNG)  
@@ -170,8 +170,8 @@
 
 
 **Other Alternative Models Considered**:
-* <u>Elastic Net</u>:
-* <u>Monotonic Gradient Boosting Machines (MGBM)</u>:
+* <u> Elastic Net </u>:
+* <u> Monotonic Gradient Boosting Machines (MGBM) </u>:
 ---
 
 ## Ethical Considerations 
