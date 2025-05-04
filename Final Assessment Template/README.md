@@ -1,12 +1,12 @@
 # 📝 Model Card: Lending Bias-Remediated Model
 
 ## Basic Information
-* **Person or organization developing model**:  
-  Patrick Hall - `jphall@gwu.edu`  
-  Bethel Mandizha - `bethel.mandizha@gwmail.gwu.edu`  
-  Miranda Montenegro - `miranda.montenegrolopez@gwmail.gwu.edu`  
-  Rahul Saha - `rahul.saha@gwmail.gwu.edu`  
-  Zeyu Wang - `zywang@gwu.edu`
+* **Person or organization developing model**:
+  * Patrick Hall - `jphall@gwu.edu`
+  * Bethel Mandizha - `bethel.mandizha@gwmail.gwu.edu`
+  * Miranda Montenegro - `miranda.montenegrolopez@gwmail.gwu.edu`
+  * Rahul Saha - `rahul.saha@gwmail.gwu.edu`
+  * Zeyu Wang - `zywang@gwu.edu`
 
 * **Model date**: May, 2025 
 * **Model version**: 1.0  
@@ -102,28 +102,28 @@
 
 #### Correlation Heatmap
 
-- This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables.
+- This heatmap shows how input features relate to one another, helping identify redundancy or strong dependencies between variables:
 
 **Figure 1. Correlation Heatmap of Input Features**
-![Correlation Heatmap](correlation.PNG)
+![Correlation Heatmap](figure1_correlation.PNG)
 
 ---
 
 #### Global Variable Importance
 
-- The EBM’s global feature importance highlights which variables most influenced predictions.
+- The EBM’s global feature importance highlights which variables most influenced predictions:
 
 **Figure 2. Global Feature Importance of the Remediated EBM Model**
-![Global Importance](global_importance.PNG)  
+![Global Importance](figure2_global_importance.PNG)  
 
 ---
 
 #### Partial Dependence Plots
 
-- These plots illustrate how individual features impact the model’s predictions.
+- These plots illustrate how individual features impact the model’s predictions:
 
 **Figure 3. Partial Dependence Plots by Features**
-![Partial Dependence Plots](partial_dependence_plots.png)  
+![Partial Dependence Plots](figure3_partial_dependence_plots.PNG)  
 
 ---
 
@@ -132,7 +132,7 @@
 - This plot visualizes the trade-off between AUC and AIR across candidate models.
   
 **Figure 4. Relationship Between AIR and AUC for Grid Search Results**
-![AIR and AUC plots](AIR_AUC.png)  
+![AIR and AUC plots](figure4_AIR_AUC.PNG)  
 
 ---
 
@@ -161,10 +161,10 @@
 - Residual and simulation plots expose subgroup errors and model shifts under economic stress.
 
 **Figure 5. Residuals Across Subgroups for the Remediated Model**
-![Residual Plot](residuals.PNG)  
+![Residual Plot](figure5_residuals.PNG)  
 
 **Figure 6. Feature Changes Under Simulated Recession Conditions**
-![Recession Simulation Plot](simulate_recession_conditions.PNG)  
+![Recession Simulation Plot](figure6_simulate_recession_conditions.PNG)  
 
 ---
 
