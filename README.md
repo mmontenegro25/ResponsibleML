@@ -103,7 +103,7 @@
 | 0.7908 | 0.7879 | 0.7960 |
 
 **NOTE**:
-* Train AUC and Validation AUC values from [this notebook](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb), with AUCs specifically detailed in cell 16.
+* Train AUC and Validation AUC values can be found in cell 16 of [this notebook](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb).
 * Test AUC taken from Professor Hall's [evaluation results](https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2025_04_14_10_28_13.csv).
 
 **Table 4 Validation AIR Values for Race and Sex Groups**
