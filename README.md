@@ -100,7 +100,7 @@
 
 | Train AUC | Validation AUC | Test AUC |
 | --------- | -------------- | -------- |
-|  | 0.7879 | 0.7960 |
+| 0.7908 | 0.7879 | 0.7960 |
 
 **NOTE**:
 * Train AUC and Validation AUC values from [this notebook](https://github.com/mmontenegro25/ResponsibleML/blob/main/Assignment%205/group3_assignment5_updated.ipynb), with AUCs specifically detailed in cell 16.
